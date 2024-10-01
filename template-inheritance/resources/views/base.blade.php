@@ -6,31 +6,34 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        li{
+        ul {
             display: flex;
             list-style: none;
-        
+            padding: 0;
         }
-        body{
+        li {
+            margin: 0 10px;
+        }
+        body {
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-direction: column
+            flex-direction: column;
         }
-        h1{
-            text-align: center
+        h1 {
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <div>
         <h1>Dynamic News Feed</h1>
-        <li>
-            <ul><a href="/news/technology">Technology</a></ul>
-            <ul><a href="/news/sports">Sports</a></ul>
-            <ul><a href="/news/politics">Politics</a></ul>
-            <ul><a href="/news/entertainment">Entertainment</a></ul>
-        </li>
+        <ul>
+            <li><a href="{{ route('technology') }}">Technology</a></li>
+            <li><a href="{{ route('sports') }}">Sports</a></li>
+            <li><a href="{{ route('politics') }}">Politics</a></li>
+            <li><a href="{{ route('entertainment') }}">Entertainment</a></li>
+        </ul>
     </div>
     <div>
         @yield('content')
