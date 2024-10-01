@@ -1,0 +1,70 @@
+body {
+    background-color: #f0f2f5;
+}
+
+.weather-card {
+    max-width: 800px;
+    margin: 30px auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom right, #4a90e2, #63b8ff);
+    color: white;
+}
+
+.weather-card .card-body {
+    padding: 20px;
+}
+
+.weather-card .main-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.weather-card .temperature {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.weather-card .description {
+    font-size: 1.2rem;
+}
+
+.weather-card .details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.weather-card .details div {
+    flex-basis: 33%;
+    margin-bottom: 10px;
+}
+
+.weather-card .forecast-container {
+    margin-top: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.weather-card .forecast {
+    display: flex;
+    min-width: max-content;
+}
+
+.weather-card .forecast-item {
+    flex: 0 0 auto;
+    text-align: center;
+    padding: 0 15px;
+    min-width: 100px;
+}
+
+.weather-card .forecast-item:not(:last-child) {
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
