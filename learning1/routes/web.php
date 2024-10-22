@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\CookieController;
 use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\ValidationController;
+use App\Http\Controllers\UploadController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\SessionController;
 use Illuminate\Support\Facades\Route;
@@ -80,3 +82,12 @@ Route::get('getsession',[SessionController::class,'fetchSession']);
 Route::get('destroysession',[SessionController::class,'destroySession']);
 
 Route::get('login',[LoginController::class,'login']);
+
+Route::get('validate',function(){
+    return view('validate');
+});
+Route::post('validate',[ValidationController::class,'index']);
+
+Route::get('upload',[UploadController::class,'index']);
+
+Route::post('upload',[UploadController::class,'uploadFile']);
